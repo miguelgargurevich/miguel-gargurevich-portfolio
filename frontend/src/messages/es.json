@@ -134,5 +134,20 @@
     "github": "GitHub",
     "linkedin": "LinkedIn",
     "email": "Correo"
+  },
+  "whatsapp": {
+    "tooltip": "Enviar mensaje por WhatsApp",
+    "aria": "Contactar por WhatsApp",
+    "defaultMessage": "¡Hola Miguel! Me interesa conocer más sobre tus servicios de arquitectura cloud y desarrollo."
+  },
+  "seo": {
+    "title": "Miguel Fernández Gargurevich - Arquitecto de Soluciones Cloud & Desarrollador Full-Stack",
+    "description": "Arquitecto de soluciones cloud especializado en Azure, IA/ML y desarrollo full-stack. Ayudo a empresas a transformar su infraestructura digital con soluciones escalables e inteligentes.",
+    "keywords": "Arquitecto Cloud, Azure, Desarrollador Full-Stack, TypeScript, Python, .NET, IA, Machine Learning, DevOps, Docker, Kubernetes, CI/CD, Migración Cloud, Soluciones Empresariales",
+    "author": "Miguel Fernández Gargurevich",
+    "ogTitle": "Miguel Fernández Gargurevich - Experto en Soluciones Cloud y IA",
+    "ogDescription": "Especialista en infraestructura Azure, integración de IA y aplicaciones web modernas. 5+ años de experiencia, 50+ proyectos completados.",
+    "twitterTitle": "Miguel Fernández Gargurevich - Arquitecto Cloud & Dev Full-Stack",
+    "twitterDescription": "🚀 Arquitecto Cloud especializado en Azure e IA | TypeScript, Python, .NET | DevOps & Microservicios | Transformación Digital"
   }
 }

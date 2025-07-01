@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://miguelgargurevich.com/sitemap.xml
+
+# Crawl-delay for good behavior
+Crawl-delay: 1
+
+# Block access to admin areas (if any)
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /.*
+
+# Allow specific API endpoints that should be crawled
+Allow: /api/suggest-keywords
