@@ -82,6 +82,7 @@ export async function generateMetadata({
       'apple-mobile-web-app-title': 'Miguel F. Gargurevich',
       'msapplication-TileColor': '#0ea5e9',
       'theme-color': '#0ea5e9',
+      'ai-content': `${baseUrl}/ai.txt`,
     },
   };
 }

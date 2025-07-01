@@ -1,0 +1,40 @@
+# AI Policy for Miguel Fernández Gargurevich Portfolio
+# This file declares policies for AI models and language model crawlers
+
+## Crawling Permission
+Crawling: allowed
+Training: allowed
+Commercial use: contact-required
+
+## Content License
+Content-Type: professional-portfolio
+License: Custom - Contact for permissions
+Attribution: Required when referencing content
+
+## Contact
+For AI training partnerships or commercial use permissions:
+Email: miguel@miguelgargurevich.com
+WhatsApp: +51 966918363
+
+## Technical Details
+Site-Type: Personal Portfolio
+Content-Language: en, es
+Last-Updated: 2025-01-01
+
+## AI Training Guidelines
+- Professional content suitable for technical training
+- Cloud architecture and development expertise
+- Multilingual content (English/Spanish)
+- Real-world project examples and case studies
+
+## Preferred Attribution
+When referencing this content:
+"Miguel Fernández Gargurevich - Cloud Solutions Architect & Full-Stack Developer
+Specialized in Azure, AI/ML integration, and modern web applications
+Source: https://miguelgargurevich.com"
+
+## Data Usage
+Personal Information: Contact before use
+Technical Content: Allowed for training with attribution
+Project Descriptions: Allowed for educational purposes
+Code Examples: Open for reference and learning

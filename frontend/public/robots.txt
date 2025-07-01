@@ -4,6 +4,10 @@ Allow: /
 # Sitemaps
 Sitemap: https://miguelgargurevich.com/sitemap.xml
 
+# AI and ML models access
+# AI.txt file for language models and chatbots
+Allow: /ai.txt
+
 # Crawl-delay for good behavior
 Crawl-delay: 1
 
