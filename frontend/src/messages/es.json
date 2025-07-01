@@ -1,0 +1,138 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "contact": "Contacto",
+    "keywordOptimizer": "Optimizador de Palabras Clave"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "Miguel Fernández Gargurevich",
+    "title": "Arquitecto de Soluciones Cloud & Desarrollador Full-Stack",
+    "subtitle": "Especializado en infraestructura Azure, integración de IA y aplicaciones web modernas",
+    "cta": "Ver Mi Trabajo",
+    "contact": "Contáctame"
+  },
+  "about": {
+    "title": "Acerca de Mí",
+    "description": "Arquitecto de soluciones cloud apasionado con experiencia en Azure, IA/ML y desarrollo full-stack. Ayudo a las empresas a transformar su infraestructura digital y construir aplicaciones escalables e inteligentes.",
+    "experience": "5+ años",
+    "experienceLabel": "Experiencia",
+    "projects": "50+",
+    "projectsLabel": "Proyectos Completados",
+    "certifications": "10+",
+    "certificationsLabel": "Certificaciones Cloud",
+    "roleTitle": "Arquitecto de Soluciones Cloud",
+    "roleDescription1": "Como arquitecto de soluciones cloud apasionado, me especializo en diseñar e implementar infraestructuras cloud escalables, seguras y rentables usando Microsoft Azure.",
+    "roleDescription2": "Mi experiencia abarca estrategias de migración a la nube, prácticas DevOps e integración de IA/ML, ayudando a las empresas a transformar su infraestructura digital y acelerar su proceso de innovación.",
+    "roleDescription3": "Creo en el poder de las tecnologías modernas para resolver desafíos empresariales complejos, y constantemente exploro nuevas herramientas y metodologías para entregar resultados excepcionales.",
+    "skillCategories": {
+      "cloudPlatforms": "Plataformas Cloud",
+      "cloudPlatformsDesc": "Azure, AWS, GCP",
+      "devops": "DevOps",
+      "devopsDesc": "Docker, Kubernetes, CI/CD",
+      "development": "Desarrollo",
+      "developmentDesc": "TypeScript, Python, .NET",
+      "aiml": "IA/ML",
+      "aimlDesc": "Azure AI, OpenAI, TensorFlow"
+    }
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "subtitle": "Explora mis últimas soluciones cloud y con IA",
+    "viewProject": "Ver Proyecto",
+    "viewCode": "Ver Código",
+    "technologies": "Tecnologías",
+    "projectList": {
+      "azureMigration": {
+        "title": "Plataforma de Migración Azure",
+        "description": "Solución de migración cloud a escala empresarial con capacidades automatizadas de evaluación, planificación y ejecución."
+      },
+      "aiOptimizer": {
+        "title": "Optimizador de Portafolio con IA",
+        "description": "Aplicación de machine learning que analiza y optimiza portafolios de inversión usando algoritmos avanzados."
+      },
+      "microservicesDashboard": {
+        "title": "Dashboard de Arquitectura de Microservicios",
+        "description": "Plataforma de monitoreo y gestión en tiempo real para infraestructura distribuida de microservicios."
+      },
+      "dataPipeline": {
+        "title": "Pipeline de Datos Serverless",
+        "description": "Arquitectura serverless escalable para procesar y analizar grandes conjuntos de datos en tiempo real."
+      }
+    }
+  },
+  "skills": {
+    "title": "Habilidades y Tecnologías",
+    "subtitle": "Mi experiencia técnica en diferentes dominios",
+    "cloud": "Plataformas Cloud",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "ai": "IA y Machine Learning",
+    "devops": "DevOps y Herramientas",
+    "learningNote": "Constantemente aprendiendo nuevas tecnologías y manteniéndome actualizado con las tendencias de la industria"
+  },
+  "contact": {
+    "title": "Ponte en Contacto",
+    "subtitle": "Hablemos sobre tu próximo proyecto",
+    "name": "Nombre",
+    "email": "Correo",
+    "message": "Mensaje",
+    "send": "Enviar Mensaje",
+    "sending": "Enviando...",
+    "success": "¡Mensaje enviado exitosamente!",
+    "error": "Error al enviar el mensaje. Por favor intenta de nuevo.",
+    "contactInfo": {
+      "email": "Correo Electrónico",
+      "location": "Ubicación",
+      "availability": "Disponibilidad"
+    },
+    "form": {
+      "title": "Enviar Mensaje",
+      "description": "Me encantaría saber sobre tu proyecto. Envíame un mensaje y te responderé lo antes posible.",
+      "successMessage": "Te responderé lo antes posible.",
+      "placeholders": {
+        "name": "Tu Nombre",
+        "email": "tu.correo@ejemplo.com",
+        "message": "Cuéntame sobre tu proyecto, objetivos y cómo puedo ayudarte..."
+      }
+    },
+    "details": {
+      "locationValue": "Remoto / Global",
+      "availabilityValue": "Abierto a nuevas oportunidades"
+    }
+  },
+  "keywordOptimizer": {
+    "title": "Optimizador de Palabras Clave del Portafolio",
+    "subtitle": "Mejora la visibilidad de tus proyectos con sugerencias de palabras clave impulsadas por IA",
+    "projectTitle": "Título del Proyecto",
+    "projectDescription": "Descripción del Proyecto",
+    "technologies": "Tecnologías Utilizadas",
+    "optimize": "Optimizar Palabras Clave",
+    "optimizing": "Analizando...",
+    "results": "Palabras Clave Sugeridas",
+    "copy": "Copiar Palabras Clave",
+    "copied": "¡Copiado al portapapeles!",
+    "projectInfo": "Información del Proyecto",
+    "projectInfoDesc": "Ingresa los detalles de tu proyecto para obtener sugerencias de palabras clave impulsadas por IA",
+    "aiKeywordsDesc": "Palabras clave generadas por IA para mejorar la visibilidad de tu proyecto",
+    "suggestedKeywords": "Palabras Clave Sugeridas",
+    "explanation": "Explicación",
+    "emptyStateMessage": "Completa el formulario para obtener sugerencias de palabras clave impulsadas por IA para tu proyecto",
+    "titlePlaceholder": "ej., Plataforma de Migración Azure",
+    "descriptionPlaceholder": "Describe tu proyecto, su propósito y características principales...",
+    "technologiesPlaceholder": "ej., React, Node.js, Azure, TypeScript"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "builtWith": "Construido con Next.js, TypeScript y Tailwind CSS",
+    "description": "Arquitecto de Soluciones Cloud y Desarrollador Full-Stack especializado en Azure, integración de IA y aplicaciones web modernas.",
+    "quickLinks": "Enlaces Rápidos",
+    "technologies": "Tecnologías",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "email": "Correo"
+  }
+}

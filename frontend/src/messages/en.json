@@ -1,0 +1,138 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact",
+    "keywordOptimizer": "Keyword Optimizer"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Miguel Fernández Gargurevich",
+    "title": "Cloud Solutions Architect & Full-Stack Developer",
+    "subtitle": "Specialized in Azure cloud infrastructure, AI integration, and modern web applications",
+    "cta": "View My Work",
+    "contact": "Get In Touch"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Passionate cloud solutions architect with expertise in Azure, AI/ML, and full-stack development. I help businesses transform their digital infrastructure and build scalable, intelligent applications.",
+    "experience": "5+ years",
+    "experienceLabel": "Experience",
+    "projects": "50+",
+    "projectsLabel": "Projects Completed",
+    "certifications": "10+",
+    "certificationsLabel": "Cloud Certifications",
+    "roleTitle": "Cloud Solutions Architect",
+    "roleDescription1": "As a passionate cloud solutions architect, I specialize in designing and implementing scalable, secure, and cost-effective cloud infrastructures using Microsoft Azure.",
+    "roleDescription2": "My expertise spans across cloud migration strategies, DevOps practices, and AI/ML integration, helping businesses transform their digital infrastructure and accelerate their innovation journey.",
+    "roleDescription3": "I believe in the power of modern technologies to solve complex business challenges, and I'm constantly exploring new tools and methodologies to deliver exceptional results.",
+    "skillCategories": {
+      "cloudPlatforms": "Cloud Platforms",
+      "cloudPlatformsDesc": "Azure, AWS, GCP",
+      "devops": "DevOps",
+      "devopsDesc": "Docker, Kubernetes, CI/CD",
+      "development": "Development",
+      "developmentDesc": "TypeScript, Python, .NET",
+      "aiml": "AI/ML",
+      "aimlDesc": "Azure AI, OpenAI, TensorFlow"
+    }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "Explore my latest cloud and AI-powered solutions",
+    "viewProject": "View Project",
+    "viewCode": "View Code",
+    "technologies": "Technologies",
+    "projectList": {
+      "azureMigration": {
+        "title": "Azure Cloud Migration Platform",
+        "description": "Enterprise-scale cloud migration solution with automated assessment, planning, and execution capabilities."
+      },
+      "aiOptimizer": {
+        "title": "AI-Powered Portfolio Optimizer",
+        "description": "Machine learning application that analyzes and optimizes investment portfolios using advanced algorithms."
+      },
+      "microservicesDashboard": {
+        "title": "Microservices Architecture Dashboard",
+        "description": "Real-time monitoring and management platform for distributed microservices infrastructure."
+      },
+      "dataPipeline": {
+        "title": "Serverless Data Pipeline",
+        "description": "Scalable serverless architecture for processing and analyzing large datasets in real-time."
+      }
+    }
+  },
+  "skills": {
+    "title": "Skills & Technologies",
+    "subtitle": "My technical expertise across different domains",
+    "cloud": "Cloud Platforms",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "ai": "AI & Machine Learning",
+    "devops": "DevOps & Tools",
+    "learningNote": "Constantly learning new technologies and staying up-to-date with industry trends"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's discuss your next project",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "Failed to send message. Please try again.",
+    "contactInfo": {
+      "email": "Email",
+      "location": "Location",
+      "availability": "Availability"
+    },
+    "form": {
+      "title": "Send Message",
+      "description": "I'd love to hear about your project. Send me a message and I'll get back to you as soon as possible.",
+      "successMessage": "I'll get back to you as soon as possible.",
+      "placeholders": {
+        "name": "Your Name",
+        "email": "your.email@example.com",
+        "message": "Tell me about your project, goals, and how I can help..."
+      }
+    },
+    "details": {
+      "locationValue": "Remote / Global",
+      "availabilityValue": "Open to new opportunities"
+    }
+  },
+  "keywordOptimizer": {
+    "title": "Portfolio Keyword Optimizer",
+    "subtitle": "Enhance your project visibility with AI-powered keyword suggestions",
+    "projectTitle": "Project Title",
+    "projectDescription": "Project Description",
+    "technologies": "Technologies Used",
+    "optimize": "Optimize Keywords",
+    "optimizing": "Analyzing...",
+    "results": "Suggested Keywords",
+    "copy": "Copy Keywords",
+    "copied": "Copied to clipboard!",
+    "projectInfo": "Project Information",
+    "projectInfoDesc": "Enter your project details to get AI-powered keyword suggestions",
+    "aiKeywordsDesc": "AI-generated keywords to improve your project visibility",
+    "suggestedKeywords": "Suggested Keywords",
+    "explanation": "Explanation",
+    "emptyStateMessage": "Fill out the form to get AI-powered keyword suggestions for your project",
+    "titlePlaceholder": "e.g., Azure Cloud Migration Platform",
+    "descriptionPlaceholder": "Describe your project, its purpose, and key features...",
+    "technologiesPlaceholder": "e.g., React, Node.js, Azure, TypeScript"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "builtWith": "Built with Next.js, TypeScript, and Tailwind CSS",
+    "description": "Cloud Solutions Architect & Full-Stack Developer specialized in Azure, AI integration, and modern web applications.",
+    "quickLinks": "Quick Links",
+    "technologies": "Technologies",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "email": "Email"
+  }
+}
