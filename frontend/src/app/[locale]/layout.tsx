@@ -125,8 +125,8 @@ export default async function LocaleLayout({
               description: 'Specialized in Azure cloud infrastructure, AI integration, and modern web applications',
               url: process.env.NEXT_PUBLIC_SITE_URL || 'https://miguelgargurevich.com',
               sameAs: [
-                'https://linkedin.com/in/miguelgargurevich',
-                'https://github.com/miguelgargurevich',
+                'https://www.linkedin.com/in/miguel-arturo-fernandez-gargurevich/',
+                'https://github.com/miguelgargurevich/',
               ],
               knowsAbout: [
                 'Cloud Architecture',

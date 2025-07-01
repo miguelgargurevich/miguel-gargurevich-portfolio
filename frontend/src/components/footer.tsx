@@ -22,7 +22,7 @@ export default function Footer() {
               </p>
               <div className="flex space-x-4">
                 <a
-                  href="https://github.com/miguelgargurevich"
+                  href="https://github.com/miguelgargurevich/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
@@ -30,7 +30,7 @@ export default function Footer() {
                   GitHub
                 </a>
                 <a
-                  href="https://linkedin.com/in/miguelgargurevich"
+                  href="https://www.linkedin.com/in/miguel-arturo-fernandez-gargurevich/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors"
