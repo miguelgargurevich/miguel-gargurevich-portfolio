@@ -4,6 +4,7 @@ import {notFound} from 'next/navigation';
 import {Inter} from 'next/font/google';
 import {Metadata} from 'next';
 import WhatsAppFloat from '@/components/whatsapp-float';
+import { ThemeProvider } from '@/components/theme-provider';
 import '../globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -151,10 +152,12 @@ export default async function LocaleLayout({
         />
       </head>
       <body className={inter.className}>
-        <NextIntlClientProvider messages={messages}>
-          {children}
-          <WhatsAppFloat />
-        </NextIntlClientProvider>
+        <ThemeProvider>
+          <NextIntlClientProvider messages={messages}>
+            {children}
+            <WhatsAppFloat />
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

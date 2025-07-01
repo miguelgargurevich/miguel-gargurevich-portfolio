@@ -149,5 +149,11 @@
     "ogDescription": "Especialista en infraestructura Azure, integración de IA y aplicaciones web modernas. 5+ años de experiencia, 50+ proyectos completados.",
     "twitterTitle": "Miguel Fernández Gargurevich - Arquitecto Cloud & Dev Full-Stack",
     "twitterDescription": "🚀 Arquitecto Cloud especializado en Azure e IA | TypeScript, Python, .NET | DevOps & Microservicios | Transformación Digital"
+  },
+  "theme": {
+    "toggle": "Cambiar tema",
+    "light": "Modo claro",
+    "dark": "Modo oscuro",
+    "system": "Tema del sistema"
   }
 }

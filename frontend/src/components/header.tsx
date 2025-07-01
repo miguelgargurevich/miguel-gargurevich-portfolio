@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Globe } from 'lucide-react';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,7 +41,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-4">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -51,20 +52,27 @@ export default function Header() {
               </Link>
             ))}
             
-            {/* Language Toggle */}
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={toggleLocale}
-              className="flex items-center gap-2"
-            >
-              <Globe className="h-4 w-4" />
-              {locale.toUpperCase()}
-            </Button>
+            <div className="flex items-center gap-2 ml-4">
+              {/* Theme Toggle */}
+              <ThemeToggle />
+              
+              {/* Language Toggle */}
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={toggleLocale}
+                className="flex items-center gap-2"
+              >
+                <Globe className="h-4 w-4" />
+                {locale.toUpperCase()}
+              </Button>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-2">
+            <ThemeToggle />
+            
             <Button
               variant="outline"
               size="sm"

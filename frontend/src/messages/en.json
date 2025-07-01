@@ -149,5 +149,11 @@
     "ogDescription": "Specialist in Azure infrastructure, AI integration, and modern web applications. 5+ years experience, 50+ completed projects.",
     "twitterTitle": "Miguel Fernández Gargurevich - Cloud Architect & Full-Stack Dev",
     "twitterDescription": "🚀 Cloud Architect specialized in Azure & AI | TypeScript, Python, .NET | DevOps & Microservices | Digital Transformation"
+  },
+  "theme": {
+    "toggle": "Toggle theme",
+    "light": "Light mode",
+    "dark": "Dark mode",
+    "system": "System theme"
   }
 }
