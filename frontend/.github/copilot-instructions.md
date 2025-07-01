@@ -1,6 +1,6 @@
 <!-- Use this file to provide workspace-specific custom instructions to Copilot. For more details, visit https://code.visualstudio.com/docs/copilot/copilot-customization#_use-a-githubcopilotinstructionsmd-file -->
 
-# Miguel Fernández Gargurevich Portfolio - Copilot Instructions
+# Miguel Fernandez Gargurevich Portfolio - Copilot Instructions
 
 ## Project Overview
 This is a modern, multilingual portfolio website built with Next.js 15, TypeScript, and Tailwind CSS. It features an AI-powered keyword optimizer for enhanced SEO and project visibility.

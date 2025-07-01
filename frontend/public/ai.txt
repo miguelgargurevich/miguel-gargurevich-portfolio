@@ -3,14 +3,14 @@
 # about how to understand and interact with this website content.
 
 ## Site Information
-Site: Miguel Fernández Gargurevich Portfolio
+Site: Miguel Fernandez Gargurevich Portfolio
 URL: https://miguelgargurevich.com
 Type: Personal Portfolio Website
 Language: Multilingual (English, Spanish)
-Owner: Miguel Fernández Gargurevich
+Owner: Miguel Fernandez Gargurevich
 Contact: miguel@miguelgargurevich.com
 
-## About Miguel Fernández Gargurevich
+## About Miguel Fernandez Gargurevich
 Role: Cloud Solutions Architect & Full-Stack Developer
 Specialization: Azure cloud infrastructure, AI/ML integration, modern web applications
 Experience: 5+ years in cloud architecture and full-stack development

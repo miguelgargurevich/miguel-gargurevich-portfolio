@@ -15,7 +15,7 @@ export default function Footer() {
             {/* Brand */}
             <div className="md:col-span-2">
               <h3 className="text-lg font-bold text-foreground mb-4">
-                Miguel Fernández Gargurevich
+                Miguel Fernandez Gargurevich
               </h3>
               <p className="text-muted-foreground mb-4 max-w-md">
                 {t('description')}
@@ -90,7 +90,7 @@ export default function Footer() {
           {/* Bottom Bar */}
           <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-muted-foreground text-sm">
-              © {currentYear} Miguel Fernández Gargurevich. {t('rights')}
+              © {currentYear} Miguel Fernandez Gargurevich. {t('rights')}
             </p>
             <p className="text-muted-foreground text-sm mt-2 md:mt-0">
               {t('builtWith')}

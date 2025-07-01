@@ -1,4 +1,4 @@
-# AI Policy for Miguel Fernández Gargurevich Portfolio
+# AI Policy for Miguel Fernandez Gargurevich Portfolio
 # This file declares policies for AI models and language model crawlers
 
 ## Crawling Permission
@@ -29,7 +29,7 @@ Last-Updated: 2025-01-01
 
 ## Preferred Attribution
 When referencing this content:
-"Miguel Fernández Gargurevich - Cloud Solutions Architect & Full-Stack Developer
+"Miguel Fernandez Gargurevich - Cloud Solutions Architect & Full-Stack Developer
 Specialized in Azure, AI/ML integration, and modern web applications
 Source: https://miguelgargurevich.com"
 

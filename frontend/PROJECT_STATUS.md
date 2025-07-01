@@ -1,4 +1,4 @@
-# Miguel Fernández Gargurevich Portfolio - Estado del Proyecto
+# Miguel Fernandez Gargurevich Portfolio - Estado del Proyecto
 
 ## ✅ COMPLETADO CON ÉXITO
 

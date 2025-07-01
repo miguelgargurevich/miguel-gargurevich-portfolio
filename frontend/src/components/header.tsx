@@ -20,7 +20,7 @@ export default function Header() {
     { name: t('about'), href: `/${locale}#about` },
     { name: t('projects'), href: `/${locale}#projects` },
     { name: t('skills'), href: `/${locale}#skills` },
-    { name: t('keywordOptimizer'), href: `/${locale}#keyword-optimizer` },
+    { name: t('aiAssistant'), href: `/${locale}/chat` },
     { name: t('contact'), href: `/${locale}#contact` },
   ];
 
@@ -37,7 +37,7 @@ export default function Header() {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link href={`/${locale}`} className="text-xl font-bold text-primary">
-            Miguel F. Gargurevich
+            {t('brandName')}
           </Link>
 
           {/* Desktop Navigation */}

@@ -5,6 +5,8 @@ import {Inter} from 'next/font/google';
 import {Metadata} from 'next';
 import WhatsAppFloat from '@/components/whatsapp-float';
 import { ThemeProvider } from '@/components/theme-provider';
+import { PWAInstallBanner } from '@/components/pwa-install-banner';
+import { OfflineIndicator } from '@/components/offline-indicator';
 import '../globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -58,7 +60,7 @@ export async function generateMetadata({
       url: url,
       title: t('ogTitle'),
       description: t('ogDescription'),
-      siteName: 'Miguel Fernández Gargurevich Portfolio',
+      siteName: 'Miguel Fernandez Gargurevich Portfolio',
       images: [
         {
           url: `${baseUrl}/og-image.jpg`,
@@ -79,7 +81,7 @@ export async function generateMetadata({
       google: process.env.GOOGLE_SITE_VERIFICATION,
     },
     other: {
-      'application-name': 'Miguel Fernández Gargurevich Portfolio',
+      'application-name': 'Miguel Fernandez Gargurevich Portfolio',
       'apple-mobile-web-app-title': 'Miguel F. Gargurevich',
       'msapplication-TileColor': '#0ea5e9',
       'theme-color': '#0ea5e9',
@@ -118,7 +120,7 @@ export default async function LocaleLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Person',
-              name: 'Miguel Fernández Gargurevich',
+              name: 'Miguel Fernandez Gargurevich',
               jobTitle: 'Cloud Solutions Architect & Full-Stack Developer',
               description: 'Specialized in Azure cloud infrastructure, AI integration, and modern web applications',
               url: process.env.NEXT_PUBLIC_SITE_URL || 'https://miguelgargurevich.com',
@@ -151,8 +153,10 @@ export default async function LocaleLayout({
       <body className={inter.className}>
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
+            <OfflineIndicator />
             {children}
             <WhatsAppFloat />
+            <PWAInstallBanner />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

@@ -2,13 +2,13 @@
 
 import { MessageCircle } from 'lucide-react'
 import { useTranslations } from 'next-intl'
+import { CONTACT_CONFIG } from '@/config/contact'
 
 export default function WhatsAppFloat() {
   const t = useTranslations('whatsapp')
   
-  const phoneNumber = '51966918363' // Código de país Perú (51) + número
   const message = encodeURIComponent('¡Hola Miguel! Me interesa conocer más sobre tus servicios de arquitectura cloud y desarrollo.')
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`
+  const whatsappUrl = CONTACT_CONFIG.whatsapp.getUrl(message)
 
   const handleClick = () => {
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer')

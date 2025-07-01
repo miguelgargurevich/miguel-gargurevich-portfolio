@@ -1,4 +1,4 @@
-# Miguel Fernández Gargurevich - Portfolio Website
+# Miguel Fernandez Gargurevich - Portfolio Website
 
 A modern, multilingual portfolio website built with Next.js, featuring an AI-powered keyword optimizer for enhanced SEO and project visibility.
 
@@ -198,7 +198,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 📞 Contact
 
-Miguel Fernández Gargurevich - miguel@gargurevich.com
+Miguel Fernandez Gargurevich - miguel@gargurevich.com
 
 Project Link: [https://github.com/miguelgargurevich/portfolio-site](https://github.com/miguelgargurevich/portfolio-site)
 
