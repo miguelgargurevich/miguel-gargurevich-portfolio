@@ -1,4 +1,4 @@
-# Miguel Fernández Gargurevich - Portfolio Website
+# Miguel Fernandez Gargurevich - Portfolio Website
 
 🌟 **Modern multilingual portfolio website with AI-powered keyword optimization**
 
@@ -208,13 +208,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-**Miguel Fernández Gargurevich**
+**Miguel Fernandez Gargurevich**
 - Cloud Solutions Architect & Full-Stack Developer
 - Specialized in Azure, AI integration, and modern web applications
 
 ### Connect
 - 🌐 **Website**: [miguelgargurevich.com](https://miguelgargurevich.com)
-- 💼 **LinkedIn**: [Miguel Fernández Gargurevich](https://linkedin.com/in/miguelgargurevich)
+- 💼 **LinkedIn**: [Miguel Fernandez Gargurevich](https://linkedin.com/in/miguelgargurevich)
 - 📧 **Email**: miguel@gargurevich.com
 - 🐙 **GitHub**: [@miguelgargurevich](https://github.com/miguelgargurevich)
 
