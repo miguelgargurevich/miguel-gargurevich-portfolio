@@ -45,12 +45,11 @@ export default function ProfessionalChat() {
     const welcomeMessage: Message = {
       id: 'welcome',
       type: 'assistant',
-      content: t('welcomeMessage'),
+      content: t('welcomeMessage') + ' ¿En qué puedo ayudarte hoy? 😊',
       timestamp: new Date()
     };
     setMessages([welcomeMessage]);
-    
-    // Use setTimeout to mark initial load as complete after the component has rendered
+
     setTimeout(() => {
       isInitialLoad.current = false;
     }, 100);
@@ -78,7 +77,8 @@ export default function ProfessionalChat() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          message: inputValue
+          message: inputValue,
+          locale: locale // Enviar el idioma actual al backend
         }),
       });
 
@@ -87,26 +87,25 @@ export default function ProfessionalChat() {
       }
 
       const data = await response.json();
-      
+
       const assistantMessage: Message = {
         id: (Date.now() + 1).toString(),
         type: 'assistant',
-        content: data.response,
+        content: data.response + ' ¿Hay algo más en lo que pueda ayudarte? 😊',
         timestamp: new Date()
       };
 
       setMessages(prev => [...prev, assistantMessage]);
     } catch (error) {
       console.error('Error sending message:', error);
-      
-      // Fallback response
+
       const assistantMessage: Message = {
         id: (Date.now() + 1).toString(),
         type: 'assistant',
-        content: t('errorMessage'),
+        content: t('errorMessage') + ' Por favor, intenta nuevamente o pregunta algo diferente.',
         timestamp: new Date()
       };
-      
+
       setMessages(prev => [...prev, assistantMessage]);
     } finally {
       setIsLoading(false);
