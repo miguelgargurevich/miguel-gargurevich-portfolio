@@ -79,8 +79,14 @@ Responde a esta consulta profesional:`;
     const response = await result.response;
     let text = response.text();
 
-    // Replace placeholder with actual name
-    text = text.replace('[Su nombre/Nombre de la empresa]', 'Miguel Fernandez Gargurevich');
+    // Replace placeholders with actual name
+    const placeholders = [
+      '[Su Nombre/Nombre de la Empresa]',
+      '[Su nombre/ Firma digital]'
+    ];
+    placeholders.forEach(placeholder => {
+      text = text.replace(placeholder, 'Miguel Fernandez Gargurevich');
+    });
 
     console.log('Successfully received response from Gemini API');
     return NextResponse.json({ response: text });
