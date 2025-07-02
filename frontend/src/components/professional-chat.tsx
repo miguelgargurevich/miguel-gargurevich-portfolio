@@ -29,6 +29,21 @@ export default function ProfessionalChat() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const isInitialLoad = useRef(true);
 
+  // Function to render text with basic markdown (bold)
+  const renderTextWithMarkdown = (text: string) => {
+    // Split text by ** for bold formatting
+    const parts = text.split(/(\*\*.*?\*\*)/g);
+    
+    return parts.map((part, index) => {
+      if (part.startsWith('**') && part.endsWith('**')) {
+        // Remove ** and make it bold
+        const boldText = part.slice(2, -2);
+        return <strong key={index}>{boldText}</strong>;
+      }
+      return part;
+    });
+  };
+
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -309,7 +324,7 @@ ${messages.filter(m => m.type === 'user').map(m => `• ${m.content.substring(0,
                             )}
                             <div className="flex-1 min-w-0">
                               <p className="text-sm leading-relaxed whitespace-pre-line break-words">
-                                {message.content}
+                                {renderTextWithMarkdown(message.content)}
                               </p>
                               <p className="text-xs opacity-60 mt-1">
                                 {message.timestamp.toLocaleTimeString()}

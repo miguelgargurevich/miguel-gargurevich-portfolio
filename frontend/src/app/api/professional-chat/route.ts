@@ -84,6 +84,38 @@ Responde a esta consulta profesional:`;
   } catch (error) {
     console.error('Error in professional-chat API:', error);
 
+    // Check if it's a quota exceeded error
+    const errorMsg = error instanceof Error ? error.message : String(error);
+    if (errorMsg.includes('exceeded your current quota') || errorMsg.includes('RESOURCE_EXHAUSTED')) {
+      const quotaMessage = locale === 'en' 
+        ? `I apologize, but the AI assistant has reached its daily usage limit. Please try again tomorrow or contact Miguel directly at miguel@gargurevich.com for immediate assistance.
+
+In the meantime, I can help you with:
+• **Web Development**: Modern websites with React/Next.js
+• **E-commerce**: Online stores with payment integration
+• **Landing Pages**: High-converting promotional pages  
+• **Mobile Apps**: Cross-platform applications
+
+**Estimated Timeline**: 2-4 weeks
+**Starting Price**: $500 - $5,000 USD (depending on complexity)
+
+Contact me directly for a detailed consultation!`
+        : `Disculpa, el asistente de IA ha alcanzado su límite diario de uso. Por favor intenta mañana o contacta a Miguel directamente en miguel@gargurevich.com para asistencia inmediata.
+
+Mientras tanto, puedo ayudarte con:
+• **Desarrollo Web**: Sitios modernos con React/Next.js
+• **E-commerce**: Tiendas online con integración de pagos
+• **Landing Pages**: Páginas promocionales de alta conversión
+• **Apps Móviles**: Aplicaciones multiplataforma
+
+**Tiempo estimado**: 2-4 semanas
+**Precio inicial**: $500 - $5,000 USD (según complejidad)
+
+¡Contáctame directamente para una consulta detallada!`;
+
+      return NextResponse.json({ response: quotaMessage });
+    }
+
     const errorMessage =
       locale === 'en'
         ? 'Internal server error'
