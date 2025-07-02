@@ -79,6 +79,9 @@ Responde a esta consulta profesional:`;
     const response = await result.response;
     let text = response.text();
 
+    // Ensure the initial greeting remains 'Estimado usuario'
+    text = text.replace('Estimado Miguel Fernández Gargurevich', 'Estimado usuario');
+
     // Replace placeholders with actual name
     const placeholders = [
       '[Su Nombre/Nombre de la Empresa]',
