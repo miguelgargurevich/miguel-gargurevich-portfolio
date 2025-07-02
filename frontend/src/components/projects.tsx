@@ -19,30 +19,41 @@ export default function Projects() {
 
   const projects: Project[] = [
     {
-      title: t('projectList.azureMigration.title'),
-      description: t('projectList.azureMigration.description'),
-      technologies: ["Azure", "TypeScript", "React", "Node.js", "PostgreSQL"],
-      demoUrl: "https://demo.example.com",
-      githubUrl: "https://github.com/miguelgargurevich/azure-migration-platform"
-    },
-    {
-      title: t('projectList.aiOptimizer.title'),
-      description: t('projectList.aiOptimizer.description'),
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Google Genkit", "Azure"],
+      title: t('projectList.miguelGargurevichPortfolio.title'),
+      description: t('projectList.miguelGargurevichPortfolio.description'),
+      technologies: ["Next.js 15", "TypeScript", "Google Gemini AI"],
       demoUrl: "https://miguelgargurevich.com",
-      githubUrl: "https://github.com/miguelgargurevich/portfolio-site"
+      githubUrl: "https://github.com/miguelgargurevich/miguel-gargurevich-portfolio"
     },
     {
-      title: t('projectList.microservicesDashboard.title'),
-      description: t('projectList.microservicesDashboard.description'),
-      technologies: ["Docker", "Kubernetes", "Python", "FastAPI", "Redis"],
-      githubUrl: "https://github.com/miguelgargurevich/microservices-dashboard"
+      title: t('projectList.lumic.title'),
+      description: t('projectList.lumic.description'),
+      technologies: ["TypeScript"],
+      githubUrl: "https://github.com/miguelgargurevich/lumic"
     },
     {
-      title: t('projectList.dataPipeline.title'),
-      description: t('projectList.dataPipeline.description'),
-      technologies: ["Azure Functions", "Python", "CosmosDB", "Event Grid", "Power BI"],
-      demoUrl: "https://analytics.example.com"
+      title: t('projectList.habitappNew.title'),
+      description: t('projectList.habitappNew.description'),
+      technologies: ["TypeScript"],
+      githubUrl: "https://github.com/miguelgargurevich/HabitappNew"
+    },
+    {
+      title: t('projectList.agileProject.title'),
+      description: t('projectList.agileProject.description'),
+      technologies: ["JavaScript"],
+      githubUrl: "https://github.com/miguelgargurevich/AgileProject"
+    },
+    {
+      title: t('projectList.mgConsultoresCore.title'),
+      description: t('projectList.mgConsultoresCore.description'),
+      technologies: ["CSS"],
+      githubUrl: "https://github.com/miguelgargurevich/MGConsultoresCore"
+    },
+    {
+      title: t('projectList.calendarApp.title'),
+      description: t('projectList.calendarApp.description'),
+      technologies: ["JavaScript"],
+      githubUrl: "https://github.com/miguelgargurevich/CalendarApp"
     }
   ];
 

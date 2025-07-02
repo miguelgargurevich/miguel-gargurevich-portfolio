@@ -11,28 +11,28 @@
   "hero": {
     "greeting": "Hola, soy",
     "name": "Miguel Fernandez Gargurevich",
-    "title": "Arquitecto de Soluciones Cloud & Desarrollador Full-Stack",
-    "subtitle": "Especializado en infraestructura Azure, integración de IA y aplicaciones web modernas",
-    "cta": "Ver Mi Trabajo",
+    "title": "Desarrollador Web & Especialista en Soluciones Digitales",
+    "subtitle": "Experto en creación de sitios web modernos, landing pages, e-commerce y aplicaciones móviles",
+    "cta": "Explora Mis Proyectos",
     "contact": "Contáctame"
   },
   "about": {
     "title": "Acerca de Mí",
-    "description": "Arquitecto de soluciones cloud apasionado con experiencia en Azure, IA/ML y desarrollo full-stack. Ayudo a las empresas a transformar su infraestructura digital y construir aplicaciones escalables e inteligentes.",
+    "description": "Desarrollador web apasionado con experiencia en la creación de sitios web modernos, landing pages, soluciones de e-commerce y aplicaciones móviles. Ayudo a las empresas a establecer una sólida presencia en línea.",
     "experience": "5+ años",
     "experienceLabel": "Experiencia",
     "projects": "50+",
     "projectsLabel": "Proyectos Completados",
     "certifications": "10+",
     "certificationsLabel": "Certificaciones Cloud",
-    "roleTitle": "Arquitecto de Soluciones Cloud",
-    "roleDescription1": "Como arquitecto de soluciones cloud apasionado, me especializo en diseñar e implementar infraestructuras cloud escalables, seguras y rentables usando Microsoft Azure.",
-    "roleDescription2": "Mi experiencia abarca estrategias de migración a la nube, prácticas DevOps e integración de IA/ML, ayudando a las empresas a transformar su infraestructura digital y acelerar su proceso de innovación.",
-    "roleDescription3": "Creo en el poder de las tecnologías modernas para resolver desafíos empresariales complejos, y constantemente exploro nuevas herramientas y metodologías para entregar resultados excepcionales.",
+    "roleTitle": "Desarrollador Web",
+    "roleDescription1": "Como desarrollador web, me especializo en diseñar y construir soluciones digitales modernas, desde landing pages hasta aplicaciones móviles, utilizando tecnologías como React y Next.js.",
+    "roleDescription2": "Mi experiencia abarca el desarrollo de soluciones de e-commerce y aplicaciones móviles, ayudando a las empresas a alcanzar sus objetivos digitales de manera eficiente y escalable.",
+    "roleDescription3": "Creo en el poder de las tecnologías modernas para resolver necesidades empresariales, y me esfuerzo por entregar resultados excepcionales en cada proyecto.",
     "skillCategories": {
       "cloudPlatforms": "Plataformas Cloud",
       "cloudPlatformsDesc": "Azure, AWS, GCP",
-      "devops": "DevOps",
+      "devops": "DevOps y Herramientas",
       "devopsDesc": "Docker, Kubernetes, CI/CD",
       "development": "Desarrollo",
       "developmentDesc": "TypeScript, Python, .NET",
@@ -48,32 +48,56 @@
     "technologies": "Tecnologías",
     "projectList": {
       "azureMigration": {
-        "title": "Plataforma de Migración Azure",
-        "description": "Solución de migración cloud a escala empresarial con capacidades automatizadas de evaluación, planificación y ejecución."
+        "title": "Landing Page para Negocios",
+        "description": "Diseño y desarrollo de una landing page moderna y optimizada para captar clientes potenciales."
       },
       "aiOptimizer": {
-        "title": "Optimizador de Portafolio con IA",
-        "description": "Aplicación de machine learning que analiza y optimiza portafolios de inversión usando algoritmos avanzados."
+        "title": "Tienda en Línea",
+        "description": "Desarrollo de una solución de e-commerce completa con carrito de compras y pasarela de pagos."
       },
       "microservicesDashboard": {
-        "title": "Dashboard de Arquitectura de Microservicios",
-        "description": "Plataforma de monitoreo y gestión en tiempo real para infraestructura distribuida de microservicios."
+        "title": "Aplicación Móvil Personalizada",
+        "description": "Creación de una app móvil intuitiva y funcional para mejorar la experiencia del usuario."
       },
       "dataPipeline": {
-        "title": "Pipeline de Datos Serverless",
-        "description": "Arquitectura serverless escalable para procesar y analizar grandes conjuntos de datos en tiempo real."
+        "title": "Sitio Web Corporativo",
+        "description": "Desarrollo de un sitio web profesional para empresas, con diseño responsivo y optimización SEO."
+      },
+      "miguelGargurevichPortfolio": {
+        "title": "Portafolio Personal",
+        "description": "Portafolio multilingüe que destaca proyectos y habilidades de desarrollo web."
+      },
+      "lumic": {
+        "title": "Lumic",
+        "description": "Proyecto reciente en TypeScript."
+      },
+      "habitappNew": {
+        "title": "Gestor de Hábitos",
+        "description": "Aplicación para ayudar a los usuarios a establecer y mantener hábitos saludables."
+      },
+      "agileProject": {
+        "title": "Gestión Ágil de Proyectos",
+        "description": "Herramienta para facilitar la gestión de proyectos con metodologías ágiles."
+      },
+      "mgConsultoresCore": {
+        "title": "MGConsultoresCore",
+        "description": "Proyecto en CSS."
+      },
+      "calendarApp": {
+        "title": "CalendarApp",
+        "description": "Aplicación de calendario en JavaScript."
       }
     }
   },
   "skills": {
     "title": "Habilidades y Tecnologías",
-    "subtitle": "Mi experiencia técnica en diferentes dominios",
-    "cloud": "Plataformas Cloud",
-    "frontend": "Frontend",
-    "backend": "Backend",
-    "ai": "IA y Machine Learning",
-    "devops": "DevOps y Herramientas",
-    "learningNote": "Constantemente aprendiendo nuevas tecnologías y manteniéndome actualizado con las tendencias de la industria"
+    "subtitle": "Principales áreas de experiencia",
+    "cloud": "Soluciones en la Nube",
+    "frontend": "Desarrollo Web",
+    "backend": "Aplicaciones Backend",
+    "ai": "Integración de IA",
+    "devops": "DevOps y herramientas CI/CD",
+    "learningNote": "Siempre explorando nuevas tecnologías para ofrecer soluciones modernas"
   },
   "contact": {
     "title": "Ponte en Contacto",

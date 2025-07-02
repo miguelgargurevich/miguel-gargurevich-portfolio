@@ -17,36 +17,27 @@ Experience: 5+ years in cloud architecture and full-stack development
 Location: Remote/Global availability
 
 ## Technical Expertise
-### Cloud Platforms
 - Microsoft Azure (Primary expertise)
 - Amazon Web Services (AWS)
 - Google Cloud Platform (GCP)
-
-### Programming Languages
 - TypeScript (Advanced)
 - Python (Advanced)
 - .NET/C# (Advanced)
 - JavaScript (Advanced)
-
-### AI/ML Technologies
 - Azure AI Services
 - OpenAI API Integration
 - TensorFlow
 - Machine Learning Pipelines
 - AI-powered applications
-
-### DevOps & Infrastructure
 - Docker & Kubernetes
 - CI/CD Pipelines
 - Infrastructure as Code
 - Microservices Architecture
 - Serverless Computing
-
-### Frontend Technologies
-- React/Next.js
-- Modern JavaScript/TypeScript
-- Responsive Design
-- Progressive Web Apps
+- Web Development (HTML, CSS, JavaScript, React, Next.js)
+- E-commerce Solutions
+- Landing Pages
+- Mobile Applications
 
 ## Services Offered
 1. Cloud Architecture Design and Implementation

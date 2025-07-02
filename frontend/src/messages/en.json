@@ -18,7 +18,7 @@
   },
   "about": {
     "title": "About Me",
-    "description": "Passionate cloud solutions architect with expertise in Azure, AI/ML, and full-stack development. I help businesses transform their digital infrastructure and build scalable, intelligent applications.",
+    "description": "Passionate web developer specializing in creating modern websites, landing pages, e-commerce solutions, and mobile applications.",
     "experience": "5+ years",
     "experienceLabel": "Experience",
     "projects": "50+",
@@ -27,7 +27,7 @@
     "certificationsLabel": "Cloud Certifications",
     "roleTitle": "Cloud Solutions Architect",
     "roleDescription1": "As a passionate cloud solutions architect, I specialize in designing and implementing scalable, secure, and cost-effective cloud infrastructures using Microsoft Azure.",
-    "roleDescription2": "My expertise spans across cloud migration strategies, DevOps practices, and AI/ML integration, helping businesses transform their digital infrastructure and accelerate their innovation journey.",
+    "roleDescription2": "My expertise spans across web development, e-commerce, and mobile app creation, helping businesses establish a strong online presence.",
     "roleDescription3": "I believe in the power of modern technologies to solve complex business challenges, and I'm constantly exploring new tools and methodologies to deliver exceptional results.",
     "skillCategories": {
       "cloudPlatforms": "Cloud Platforms",
@@ -62,6 +62,30 @@
       "dataPipeline": {
         "title": "Serverless Data Pipeline",
         "description": "Scalable serverless architecture for processing and analyzing large datasets in real-time."
+      },
+      "miguelGargurevichPortfolio": {
+        "title": "Multilingual Portfolio",
+        "description": "Modern portfolio with AI-powered keyword optimization."
+      },
+      "lumic": {
+        "title": "Lumic",
+        "description": "Recent project in TypeScript."
+      },
+      "habitappNew": {
+        "title": "HabitappNew",
+        "description": "Application for habit management."
+      },
+      "agileProject": {
+        "title": "AgileProject",
+        "description": "JavaScript project with MIT license."
+      },
+      "mgConsultoresCore": {
+        "title": "MGConsultoresCore",
+        "description": "Project in CSS."
+      },
+      "calendarApp": {
+        "title": "CalendarApp",
+        "description": "Calendar application in JavaScript."
       }
     }
   },
@@ -95,7 +119,7 @@
     "subtitle": "Ask me about my services, technologies, project costs, or get recommendations for your next project.",
     "chatTitle": "Miguel's AI Assistant",
     "chatDescription": "Get instant answers about services, technologies, and project estimates.",
-    "welcomeMessage": "Hi! I'm Miguel's professional assistant. I can help you with:\n\n• Information about services and expertise\n• Technology recommendations\n• Project cost estimates\n• Cloud architecture questions\n• Development timelines\n\nWhat would you like to know?",
+    "welcomeMessage": "Hi! I'm Miguel's professional assistant. I can help you with:\n\n• Information about basic services (websites, apps, e-commerce)\n• Technology recommendations\n• Project cost estimates\n• Development timelines\n\nWhat would you like to know?",
     "inputPlaceholder": "Ask about services, costs, technologies...",
     "typing": "Typing...",
     "clearChat": "Clear Chat",
