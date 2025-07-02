@@ -84,7 +84,7 @@ Responde a esta consulta profesional:`;
   } catch (error) {
     console.error('Error in professional-chat API:', error);
 
-    let errorMessage =
+    const errorMessage =
       locale === 'en'
         ? 'Internal server error'
         : 'Error interno del servidor';
