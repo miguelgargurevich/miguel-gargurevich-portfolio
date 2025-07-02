@@ -72,12 +72,15 @@ INSTRUCCIONES:
 
 Responde a esta consulta profesional:`;
 
-    const prompt = `${systemPrompt}\n\nConsulta del cliente: ${message}`;
+    const prompt = `${systemPrompt}\n\nEstimado usuario,\n\nConsulta del cliente: ${message}`;
 
     console.log('Sending request to Gemini API...');
     const result = await model.generateContent(prompt);
     const response = await result.response;
-    const text = response.text();
+    let text = response.text();
+
+    // Replace placeholder with actual name
+    text = text.replace('[Su nombre/Nombre de la empresa]', 'Miguel Fernandez Gargurevich');
 
     console.log('Successfully received response from Gemini API');
     return NextResponse.json({ response: text });
