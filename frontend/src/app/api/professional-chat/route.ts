@@ -252,10 +252,13 @@ Responde a esta consulta profesional:`;
     text = text.replace(/Best regards,?\s*[\n\r]*\s*Miguel Fernandez Gargurevich[\n\r]*\s*Web Developer/gi, '\n\nYour Professional Assistant.');
     
     // Ensure proper spacing before the final question
-    if (!text.includes('¿Hay algo más en lo que pueda ayudarte?') && locale === 'es') {
-      text += '\n\n¿Hay algo más en lo que pueda ayudarte? 😊';
-    } else if (!text.includes('Is there anything else I can help you with?') && locale === 'en') {
-      text += '\n\nIs there anything else I can help you with? 😊';
+    const finalQuestion = locale === 'es' 
+      ? '¿Hay algo más en lo que pueda ayudarte? 😊'
+      : 'Is there anything else I can help you with? 😊';
+    
+    if (!text.includes('¿Hay algo más en lo que pueda ayudarte?') && 
+        !text.includes('Is there anything else I can help you with?')) {
+      text += `\n\n${finalQuestion}`;
     }
 
     console.log('Successfully received response from Gemini API');
