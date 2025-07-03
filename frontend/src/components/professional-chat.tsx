@@ -106,7 +106,7 @@ export default function ProfessionalChat() {
       const assistantMessage: Message = {
         id: (Date.now() + 1).toString(),
         type: 'assistant',
-        content: data.response + ' ¿Hay algo más en lo que pueda ayudarte? 😊',
+        content: data.response,
         timestamp: new Date()
       };
 

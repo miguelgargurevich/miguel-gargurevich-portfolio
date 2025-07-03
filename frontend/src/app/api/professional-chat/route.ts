@@ -1,5 +1,14 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { NextRequest, NextResponse } from 'next/server';
+import fs from 'fs';
+import path from 'path';
+
+// Helper function to load translations
+function loadTranslations(locale: string) {
+  const filePath = path.join(process.cwd(), 'src', 'messages', `${locale}.json`);
+  const fileContent = fs.readFileSync(filePath, 'utf8');
+  return JSON.parse(fileContent);
+}
 
 export async function POST(request: NextRequest) {
   let locale: string | undefined;
@@ -252,14 +261,28 @@ Responde a esta consulta profesional:`;
     text = text.replace(/Best regards,?\s*[\n\r]*\s*Miguel Fernandez Gargurevich[\n\r]*\s*Web Developer/gi, '\n\nYour Professional Assistant.');
     
     // Ensure proper spacing before the final question
-    const finalQuestion = locale === 'es' 
-      ? '¿Hay algo más en lo que pueda ayudarte? 😊'
-      : 'Is there anything else I can help you with? 😊';
+    const translations = loadTranslations(locale);
+    const finalQuestion = translations.professionalChat.finalQuestion;
     
-    if (!text.includes('¿Hay algo más en lo que pueda ayudarte?') && 
-        !text.includes('Is there anything else I can help you with?')) {
-      text += `\n\n${finalQuestion}`;
-    }
+    // More aggressive cleanup of final questions - remove any occurrence of either question
+    // Split by lines and filter out lines that contain final questions or consultation calls
+    let lines = text.split('\n');
+    lines = lines.filter(line => {
+      const trimmedLine = line.trim();
+      return !trimmedLine.includes('¿Hay algo más en lo que pueda ayudarte?') && 
+             !trimmedLine.includes('Is there anything else I can help you with?') &&
+             !trimmedLine.includes('Contact me directly for a detailed consultation!') &&
+             !trimmedLine.includes('¡Contáctame directamente para una consulta detallada!');
+    });
+    
+    // Rejoin the lines
+    text = lines.join('\n').trim();
+    
+    // Remove any trailing punctuation that might be left hanging
+    text = text.replace(/[!\.\?]*\s*$/, '');
+    
+    // Add the correct final question for the current locale
+    text += `\n\n${finalQuestion}`;
 
     console.log('Successfully received response from Gemini API');
     return NextResponse.json({ response: text });
@@ -298,10 +321,8 @@ Mientras tanto, puedo ayudarte con:
       return NextResponse.json({ response: quotaMessage });
     }
 
-    const errorMessage =
-      locale === 'en'
-        ? 'Internal server error'
-        : 'Error interno del servidor';
+    const translations = loadTranslations(locale || 'es');
+    const errorMessage = translations.professionalChat.errorMessage;
     return NextResponse.json({ error: errorMessage }, { status: 500 });
   }
 }
