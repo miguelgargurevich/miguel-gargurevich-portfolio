@@ -18,7 +18,7 @@ This portfolio has a complete PWA favicon system configured in `site.webmanifest
 
 ## Next Steps to Complete
 
-1. **Design a professional logo** representing your brand as Cloud Solutions Architect
+1. **Design a professional logo** representing your brand as Web Developer & Digital Solutions Specialist
 2. **Generate all required sizes** using tools like:
    - https://favicon.io
    - https://realfavicongenerator.net

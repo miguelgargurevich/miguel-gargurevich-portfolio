@@ -11,8 +11,8 @@
   "hero": {
     "greeting": "Hello, I'm",
     "name": "Miguel Fernandez Gargurevich",
-    "title": "Cloud Solutions Architect & Full-Stack Developer",
-    "subtitle": "Specialized in Azure cloud infrastructure, AI integration, and modern web applications",
+    "title": "Web Developer & Digital Solutions Specialist",
+    "subtitle": "Expert in creating modern websites, landing pages, e-commerce and mobile applications",
     "cta": "View My Work",
     "contact": "Get In Touch"
   },
@@ -25,8 +25,8 @@
     "projectsLabel": "Projects Completed",
     "certifications": "10+",
     "certificationsLabel": "Cloud Certifications",
-    "roleTitle": "Cloud Solutions Architect",
-    "roleDescription1": "As a passionate cloud solutions architect, I specialize in designing and implementing scalable, secure, and cost-effective cloud infrastructures using Microsoft Azure.",
+    "roleTitle": "Web Developer & Digital Solutions Specialist",
+    "roleDescription1": "As a passionate web developer, I specialize in designing and building modern digital solutions, from landing pages to mobile applications, using technologies like React, Next.js, and Angular.",
     "roleDescription2": "My expertise spans across web development, e-commerce, and mobile app creation, helping businesses establish a strong online presence.",
     "roleDescription3": "I believe in the power of modern technologies to solve complex business challenges, and I'm constantly exploring new tools and methodologies to deliver exceptional results.",
     "skillCategories": {
@@ -176,17 +176,17 @@
   "whatsapp": {
     "tooltip": "Send WhatsApp message",
     "aria": "Contact via WhatsApp",
-    "defaultMessage": "Hello Miguel! I'm interested in learning more about your cloud architecture and development services."
+    "defaultMessage": "Hello Miguel! I'm interested in learning more about your web development services."
   },
   "seo": {
-    "title": "Miguel Fernandez Gargurevich - Cloud Solutions Architect & Full-Stack Developer",
-    "description": "Cloud solutions architect specialized in Azure, AI/ML, and full-stack development. I help businesses transform their digital infrastructure with scalable and intelligent solutions.",
-    "keywords": "Cloud Architect, Azure, Full-Stack Developer, TypeScript, Python, .NET, AI, Machine Learning, DevOps, Docker, Kubernetes, CI/CD, Cloud Migration, Enterprise Solutions",
+    "title": "Miguel Fernandez Gargurevich - Web Developer & Digital Solutions Specialist",
+    "description": "Web developer specialized in modern websites, landing pages, e-commerce and mobile applications. I help businesses establish a strong online presence with scalable digital solutions.",
+    "keywords": "Web Developer, React, Next.js, Angular, TypeScript, JavaScript, Landing Pages, E-commerce, Mobile Apps, Digital Solutions, Web Development, Frontend Developer",
     "author": "Miguel Fernandez Gargurevich",
-    "ogTitle": "Miguel Fernandez Gargurevich - Cloud Solutions & AI Expert",
-    "ogDescription": "Specialist in Azure infrastructure, AI integration, and modern web applications. 5+ years experience, 50+ completed projects.",
-    "twitterTitle": "Miguel Fernandez Gargurevich - Cloud Architect & Full-Stack Dev",
-    "twitterDescription": "🚀 Cloud Architect specialized in Azure & AI | TypeScript, Python, .NET | DevOps & Microservices | Digital Transformation"
+    "ogTitle": "Miguel Fernandez Gargurevich - Web Developer & Digital Expert",
+    "ogDescription": "Specialist in modern web development, e-commerce solutions, and mobile applications. 5+ years experience, 50+ completed projects.",
+    "twitterTitle": "Miguel Fernandez Gargurevich - Web Developer & Digital Solutions",
+    "twitterDescription": "🚀 Web Developer specialized in React & Next.js | E-commerce & Mobile Apps | Modern Digital Solutions | Landing Pages"
   },
   "theme": {
     "toggle": "Toggle theme",

@@ -9,7 +9,7 @@
 
 ## 🚀 Overview
 
-Professional portfolio website showcasing cloud solutions architecture expertise, full-stack development projects, and AI integration capabilities. Built with modern technologies and featuring real AI-powered keyword optimization for enhanced SEO and discoverability.
+Professional portfolio website showcasing web development expertise, digital solutions projects, and modern application capabilities. Built with modern technologies and featuring real AI-powered keyword optimization for enhanced SEO and discoverability.
 
 ## ✨ Features
 
@@ -209,7 +209,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Author
 
 **Miguel Fernandez Gargurevich**
-- Cloud Solutions Architect & Full-Stack Developer
+- Web Developer & Digital Solutions Specialist
 - Specialized in Azure, AI integration, and modern web applications
 
 ### Connect

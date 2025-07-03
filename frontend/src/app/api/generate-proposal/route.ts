@@ -219,7 +219,7 @@ function generateEnglishPDF(doc: jsPDF, date: string, features: string[], estima
   // Header
   addText("TECHNICAL AND COMMERCIAL PROPOSAL", 18, true);
   addText("Miguel Fernandez Gargurevich", 14, true);
-  addText("Cloud Solutions Architect & Full-Stack Developer", 12);
+  addText("Web Developer & Digital Solutions Specialist", 12);
   addText(`Date: ${date}`, 11);
   
   y += 10;

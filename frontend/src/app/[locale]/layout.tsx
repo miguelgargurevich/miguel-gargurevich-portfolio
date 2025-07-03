@@ -121,7 +121,7 @@ export default async function LocaleLayout({
               '@context': 'https://schema.org',
               '@type': 'Person',
               name: 'Miguel Fernandez Gargurevich',
-              jobTitle: 'Cloud Solutions Architect & Full-Stack Developer',
+              jobTitle: 'Web Developer & Digital Solutions Specialist',
               description: 'Specialized in Azure cloud infrastructure, AI integration, and modern web applications',
               url: process.env.NEXT_PUBLIC_SITE_URL || 'https://miguelgargurevich.com',
               sameAs: [

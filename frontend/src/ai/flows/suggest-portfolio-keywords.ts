@@ -163,7 +163,7 @@ function generateFallbackKeywords(input: ProjectData): KeywordResponse {
   const professionalKeywords = [
     'software engineer',
     'full-stack developer',
-    'cloud solutions architect',
+    'web developer digital solutions specialist',
     'technical leadership',
     'agile development',
     'best practices',

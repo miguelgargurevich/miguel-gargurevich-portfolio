@@ -29,7 +29,7 @@ Last-Updated: 2025-01-01
 
 ## Preferred Attribution
 When referencing this content:
-"Miguel Fernandez Gargurevich - Cloud Solutions Architect & Full-Stack Developer
+"Miguel Fernandez Gargurevich - Web Developer & Digital Solutions Specialist
 Specialized in Azure, AI/ML integration, and modern web applications
 Source: https://miguelgargurevich.com"
 

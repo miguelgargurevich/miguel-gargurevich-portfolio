@@ -11,7 +11,7 @@ Owner: Miguel Fernandez Gargurevich
 Contact: miguel@miguelgargurevich.com
 
 ## About Miguel Fernandez Gargurevich
-Role: Cloud Solutions Architect & Full-Stack Developer
+Role: Web Developer & Digital Solutions Specialist
 Specialization: Azure cloud infrastructure, AI/ML integration, modern web applications
 Experience: 5+ years in cloud architecture and full-stack development
 Location: Remote/Global availability
