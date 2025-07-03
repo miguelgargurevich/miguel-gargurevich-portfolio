@@ -139,11 +139,11 @@ export default function ProfessionalChat() {
 
   // Function to estimate project cost based on conversation content
   const estimateProjectCost = (conversationText: string) => {
-    let estimatedCost = 500; // Base cost
+    let estimatedCost = 300; // Base cost for landing page
     const text = conversationText.toLowerCase();
     
     // Add costs based on mentioned features
-    if (text.includes('ecommerce') || text.includes('tienda')) estimatedCost += 1500;
+    if (text.includes('ecommerce') || text.includes('tienda') || text.includes('carrito')) estimatedCost = Math.max(estimatedCost, 500); // Minimum for e-commerce
     if (text.includes('cms') || text.includes('administración')) estimatedCost += 800;
     if (text.includes('seo')) estimatedCost += 300;
     if (text.includes('analytics')) estimatedCost += 200;
