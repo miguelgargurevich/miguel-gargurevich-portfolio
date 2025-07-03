@@ -60,7 +60,7 @@ export default function ProfessionalChat() {
     const welcomeMessage: Message = {
       id: 'welcome',
       type: 'assistant',
-      content: t('welcomeMessage') + ' ¿En qué puedo ayudarte hoy? 😊',
+      content: t('welcomeMessage') + ' ' + t('howCanIHelp'),
       timestamp: new Date()
     };
     setMessages([welcomeMessage]);
