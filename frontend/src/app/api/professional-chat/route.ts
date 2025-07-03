@@ -35,7 +35,9 @@ export async function POST(request: NextRequest) {
     // Adjust system prompt based on locale
     const systemPrompt =
       locale === 'en'
-        ? `You are a professional assistant for Miguel Fernandez Gargurevich, a Web Developer specialized in:
+        ? `You are a professional assistant for Miguel Fernandez Gargurevich, a Web Developer & Digital Solutions Specialist.
+
+Expert in creating modern websites, landing pages, e-commerce and mobile applications.
 
 EXPERTISE:
 - Web Development (HTML, CSS, JavaScript, React, Next.js, Angular)
@@ -134,7 +136,9 @@ EXAMPLE PRICING FORMAT:
 **$250 - $600 USD** - This estimate includes frontend development (15-30 hours), responsive design, basic SEO optimization, testing across devices, and deployment setup.
 
 Respond to this professional query:`
-        : `Eres un asistente profesional para Miguel Fernandez Gargurevich, un Desarrollador Web especializado en:
+        : `Eres un asistente profesional para Miguel Fernandez Gargurevich, un Desarrollador Web & Especialista en Soluciones Digitales.
+
+Experto en creación de sitios web modernos, landing pages, e-commerce y aplicaciones móviles.
 
 EXPERTISE:
 - Desarrollo Web (HTML, CSS, JavaScript, React, Next.js, Angular)
