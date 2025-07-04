@@ -29,14 +29,142 @@ export default function ProfessionalChat() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const isInitialLoad = useRef(true);
 
-  // Function to render text with basic markdown (bold)
+  // Function to render text with markdown (bold and tables)
   const renderTextWithMarkdown = (text: string) => {
+    // Check if text contains a table
+    const tableRegex = /\|.*\|/;
+    const hasTable = tableRegex.test(text);
+    
+    if (hasTable) {
+      return renderMarkdownWithTables(text);
+    }
+    
     // Split text by ** for bold formatting
     const parts = text.split(/(\*\*.*?\*\*)/g);
     
     return parts.map((part, index) => {
       if (part.startsWith('**') && part.endsWith('**')) {
         // Remove ** and make it bold
+        const boldText = part.slice(2, -2);
+        return <strong key={index}>{boldText}</strong>;
+      }
+      return part;
+    });
+  };
+
+  // Function to render markdown with tables
+  const renderMarkdownWithTables = (text: string) => {
+    const lines = text.split('\n');
+    const elements: React.ReactNode[] = [];
+    let currentIndex = 0;
+    
+    while (currentIndex < lines.length) {
+      const line = lines[currentIndex];
+      
+      // Check if this line contains table pipes
+      if (line.includes('|')) {
+        // Find consecutive lines that contain pipes (table rows)
+        const tableStart = currentIndex;
+        let tableEnd = currentIndex;
+        
+        // Look for consecutive table lines
+        while (tableEnd < lines.length && lines[tableEnd].includes('|')) {
+          tableEnd++;
+        }
+        
+        // Extract table lines
+        const tableLines = lines.slice(tableStart, tableEnd);
+        
+        // Filter out separator lines (lines with only |, -, and spaces)
+        const dataLines = tableLines.filter(line => {
+          const cleaned = line.trim();
+          return cleaned.length > 0 && !cleaned.match(/^[\|\s\-]+$/);
+        });
+        
+        if (dataLines.length >= 1) { // At least one data row
+          // Try to identify header vs data rows
+          const [firstRow, ...remainingRows] = dataLines;
+          
+          // Parse all rows the same way
+          const parseRow = (row: string) => {
+            return row.split('|')
+              .map(cell => cell.trim())
+              .filter(cell => cell.length > 0);
+          };
+          
+          const firstRowCells = parseRow(firstRow);
+          const dataRowsCells = remainingRows.map(parseRow);
+          
+          // Find the maximum number of columns
+          const maxCols = Math.max(
+            firstRowCells.length,
+            ...dataRowsCells.map(row => row.length)
+          );
+          
+          if (maxCols >= 2) { // At least 2 columns to make it a valid table
+            // Render table
+            elements.push(
+              <div key={`table-${currentIndex}`} className="my-4 overflow-x-auto">
+                <table className="w-full border-collapse border border-gray-300 dark:border-gray-600 text-sm">
+                  <thead>
+                    <tr className="bg-gray-50 dark:bg-gray-800">
+                      {firstRowCells.map((header, idx) => (
+                        <th 
+                          key={idx} 
+                          className="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left font-semibold"
+                        >
+                          {renderBoldText(header)}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {dataRowsCells.map((row, rowIdx) => (
+                      <tr key={rowIdx} className="hover:bg-gray-50 dark:hover:bg-gray-800/50">
+                        {Array.from({ length: maxCols }, (_, cellIdx) => (
+                          <td 
+                            key={cellIdx} 
+                            className="border border-gray-300 dark:border-gray-600 px-3 py-2"
+                          >
+                            {row[cellIdx] ? renderBoldText(row[cellIdx]) : ''}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            );
+            
+            currentIndex = tableEnd;
+            continue;
+          }
+        }
+      }
+      
+      // Regular text line (not part of a table)
+      if (line.trim()) {
+        elements.push(
+          <div key={`text-${currentIndex}`} className="mb-2">
+            {renderBoldText(line)}
+          </div>
+        );
+      } else {
+        // Empty line - add some spacing
+        elements.push(<br key={`br-${currentIndex}`} />);
+      }
+      currentIndex++;
+    }
+    
+    return elements.length > 0 ? elements : renderBoldText(text);
+  };
+
+  // Helper function to render bold text
+  const renderBoldText = (text: string) => {
+    const parts = text.split(/(\*\*.*?\*\*)/g);
+    
+    return parts.map((part, index) => {
+      if (part.startsWith('**') && part.endsWith('**')) {
         const boldText = part.slice(2, -2);
         return <strong key={index}>{boldText}</strong>;
       }
@@ -323,9 +451,9 @@ ${messages.filter(m => m.type === 'user').map(m => `• ${m.content.substring(0,
                               <User className="w-4 h-4 mt-0.5 flex-shrink-0" />
                             )}
                             <div className="flex-1 min-w-0">
-                              <p className="text-sm leading-relaxed whitespace-pre-line break-words">
+                              <div className="text-sm leading-relaxed whitespace-pre-line break-words">
                                 {renderTextWithMarkdown(message.content)}
-                              </p>
+                              </div>
                               <p className="text-xs opacity-60 mt-1">
                                 {message.timestamp.toLocaleTimeString()}
                               </p>
