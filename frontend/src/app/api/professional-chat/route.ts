@@ -13,7 +13,7 @@ function loadTranslations(locale: string) {
 export async function POST(request: NextRequest) {
   let locale: string | undefined;
   try {
-    const { message, locale: reqLocale } = await request.json();
+    const { message, locale: reqLocale, context, sentiment, sessionId } = await request.json();
     locale = reqLocale;
 
     if (!message) {
@@ -219,7 +219,37 @@ REQUISITOS CRÍTICOS:
 
 Responde a esta consulta profesional:`;
 
-    const prompt = `${systemPrompt}\n\nEstimado usuario,\n\nConsulta del cliente: ${message}`;
+    // Build enhanced prompt with context and sentiment
+    let enhancedPrompt = `${systemPrompt}\n\nEstimado usuario,\n\n`;
+    
+    // Add conversation context if available
+    if (context && context.trim()) {
+      enhancedPrompt += `CONTEXTO DE CONVERSACIÓN PREVIA:\n${context}\n\n`;
+    }
+    
+    // Add sentiment-based instructions
+    if (sentiment) {
+      enhancedPrompt += `ANÁLISIS DE SENTIMIENTO DEL CLIENTE:\n`;
+      enhancedPrompt += `- Sentimiento: ${sentiment.label} (puntuación: ${sentiment.score.toFixed(2)})\n`;
+      enhancedPrompt += `- Confianza: ${Math.round(sentiment.confidence * 100)}%\n`;
+      
+      // Add tone adjustment based on sentiment
+      if (sentiment.label.includes('negative')) {
+        enhancedPrompt += `- INSTRUCCIÓN ESPECIAL: El cliente muestra sentimiento negativo. Usa un tono empático, comprensivo y enfocado en soluciones. Reconoce cualquier preocupación y ofrece ayuda específica.\n`;
+      } else if (sentiment.label.includes('positive')) {
+        enhancedPrompt += `- INSTRUCCIÓN ESPECIAL: El cliente muestra sentimiento positivo. Mantén el entusiasmo, usa lenguaje alentador y muestra aprecio por su interés.\n`;
+      }
+      enhancedPrompt += `\n`;
+    }
+    
+    // Add session context
+    if (sessionId) {
+      enhancedPrompt += `ID de Sesión: ${sessionId}\n\n`;
+    }
+    
+    enhancedPrompt += `Consulta del cliente: ${message}`;
+
+    const prompt = enhancedPrompt;
 
     console.log('Sending request to Gemini API...');
     const result = await model.generateContent(prompt);

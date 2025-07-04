@@ -10,6 +10,7 @@ import { Loader2, Send, Bot, User, MessageCircle, Trash2, FileText, Download, Ar
 import DynamicQuickQuestions from '@/components/dynamic-quick-questions';
 import Footer from '@/components/footer';
 import { CONTACT_CONFIG } from '@/config/contact';
+import { conversationMemory } from '@/lib/conversationMemory';
 
 interface Message {
   id: string;
@@ -28,6 +29,12 @@ export default function ProfessionalChat() {
   const [isGeneratingPDF, setIsGeneratingPDF] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const isInitialLoad = useRef(true);
+
+  // Session ID for conversation memory (will be used in future updates)
+  const sessionId = conversationMemory.generateSessionId();
+  
+  // TODO: Full implementation of memory and sentiment features coming soon
+  console.log('Chat session started:', sessionId);
 
   // Function to render text with markdown (bold and tables)
   const renderTextWithMarkdown = (text: string) => {
