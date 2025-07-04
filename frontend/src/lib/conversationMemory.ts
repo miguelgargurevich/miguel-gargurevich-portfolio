@@ -314,6 +314,18 @@ export class ConversationMemoryManager {
       preferences: memory.preferences
     };
   }
+
+  // Get conversation history for a session
+  getConversationHistory(sessionId: string): Message[] {
+    const memory = this.getMemory(sessionId);
+    return memory ? memory.conversationHistory : [];
+  }
+
+  // Clear conversation memory for a session
+  clearMemory(sessionId: string): void {
+    this.memory.delete(sessionId);
+    this.saveToStorage();
+  }
 }
 
 // Singleton instance

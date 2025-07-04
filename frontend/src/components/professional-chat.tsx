@@ -11,6 +11,7 @@ import DynamicQuickQuestions from '@/components/dynamic-quick-questions';
 import Footer from '@/components/footer';
 import { CONTACT_CONFIG } from '@/config/contact';
 import { conversationMemory } from '@/lib/conversationMemory';
+import React from 'react';
 
 interface Message {
   id: string;
@@ -30,11 +31,26 @@ export default function ProfessionalChat() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const isInitialLoad = useRef(true);
 
-  // Session ID for conversation memory (will be used in future updates)
-  const sessionId = conversationMemory.generateSessionId();
-  
-  // TODO: Full implementation of memory and sentiment features coming soon
-  console.log('Chat session started:', sessionId);
+  // Generar sessionId una sola vez
+  const sessionId = React.useMemo(() => {
+    return conversationMemory.generateSessionId();
+  }, []);
+
+  // Cargar historial al inicializar
+  React.useEffect(() => {
+    const loadChatHistory = async () => {
+      try {
+        const history = await conversationMemory.getConversationHistory(sessionId);
+        if (history.length > 0) {
+          setMessages(history);
+        }
+      } catch (error) {
+        console.error('Error al cargar historial del chat:', error);
+      }
+    };
+    
+    loadChatHistory();
+  }, [sessionId]);
 
   // Function to render text with markdown (bold and tables)
   const renderTextWithMarkdown = (text: string) => {
@@ -221,6 +237,12 @@ export default function ProfessionalChat() {
     setIsLoading(true);
 
     try {
+      // Agregar mensaje a la memoria de conversación (incluye análisis de sentimiento automático)
+      const enhancedMessage = conversationMemory.addMessage(sessionId, userMessage);
+      
+      // Obtener contexto de la conversación
+      const conversationContext = conversationMemory.getConversationSummary(sessionId);
+
       const response = await fetch('/api/professional-chat', {
         method: 'POST',
         headers: {
@@ -228,7 +250,10 @@ export default function ProfessionalChat() {
         },
         body: JSON.stringify({
           message: inputValue,
-          locale: locale // Enviar el idioma actual al backend
+          locale: locale,
+          sessionId: sessionId,
+          conversationContext: conversationContext,
+          userSentiment: enhancedMessage.sentiment
         }),
       });
 
@@ -245,6 +270,9 @@ export default function ProfessionalChat() {
         timestamp: new Date()
       };
 
+      // Agregar respuesta del asistente a la memoria
+      conversationMemory.addMessage(sessionId, assistantMessage);
+
       setMessages(prev => [...prev, assistantMessage]);
     } catch (error) {
       console.error('Error sending message:', error);
@@ -256,6 +284,9 @@ export default function ProfessionalChat() {
         timestamp: new Date()
       };
 
+      // Agregar mensaje de error a la memoria también
+      conversationMemory.addMessage(sessionId, assistantMessage);
+
       setMessages(prev => [...prev, assistantMessage]);
     } finally {
       setIsLoading(false);
@@ -263,6 +294,9 @@ export default function ProfessionalChat() {
   };
 
   const clearChat = () => {
+    // Limpiar la memoria de conversación
+    conversationMemory.clearMemory(sessionId);
+    
     const welcomeMessage: Message = {
       id: 'welcome',
       type: 'assistant',

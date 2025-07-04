@@ -13,7 +13,15 @@ function loadTranslations(locale: string) {
 export async function POST(request: NextRequest) {
   let locale: string | undefined;
   try {
-    const { message, locale: reqLocale, context, sentiment, sessionId } = await request.json();
+    const { 
+      message, 
+      locale: reqLocale, 
+      context, 
+      sentiment, 
+      sessionId,
+      conversationContext,
+      userSentiment 
+    } = await request.json();
     locale = reqLocale;
 
     if (!message) {
@@ -222,21 +230,24 @@ Responde a esta consulta profesional:`;
     // Build enhanced prompt with context and sentiment
     let enhancedPrompt = `${systemPrompt}\n\nEstimado usuario,\n\n`;
     
-    // Add conversation context if available
-    if (context && context.trim()) {
+    // Add conversation context if available (priority to new conversationContext)
+    if (conversationContext && conversationContext.trim()) {
+      enhancedPrompt += `CONTEXTO DE LA CONVERSACIÓN:\n${conversationContext}\n\n`;
+    } else if (context && context.trim()) {
       enhancedPrompt += `CONTEXTO DE CONVERSACIÓN PREVIA:\n${context}\n\n`;
     }
     
-    // Add sentiment-based instructions
-    if (sentiment) {
+    // Add sentiment analysis (priority to new userSentiment)
+    const sentimentData = userSentiment || sentiment;
+    if (sentimentData) {
       enhancedPrompt += `ANÁLISIS DE SENTIMIENTO DEL CLIENTE:\n`;
-      enhancedPrompt += `- Sentimiento: ${sentiment.label} (puntuación: ${sentiment.score.toFixed(2)})\n`;
-      enhancedPrompt += `- Confianza: ${Math.round(sentiment.confidence * 100)}%\n`;
+      enhancedPrompt += `- Sentimiento: ${sentimentData.label} (puntuación: ${sentimentData.score.toFixed(2)})\n`;
+      enhancedPrompt += `- Confianza: ${Math.round(sentimentData.confidence * 100)}%\n`;
       
       // Add tone adjustment based on sentiment
-      if (sentiment.label.includes('negative')) {
+      if (sentimentData.label.includes('negative')) {
         enhancedPrompt += `- INSTRUCCIÓN ESPECIAL: El cliente muestra sentimiento negativo. Usa un tono empático, comprensivo y enfocado en soluciones. Reconoce cualquier preocupación y ofrece ayuda específica.\n`;
-      } else if (sentiment.label.includes('positive')) {
+      } else if (sentimentData.label.includes('positive')) {
         enhancedPrompt += `- INSTRUCCIÓN ESPECIAL: El cliente muestra sentimiento positivo. Mantén el entusiasmo, usa lenguaje alentador y muestra aprecio por su interés.\n`;
       }
       enhancedPrompt += `\n`;
