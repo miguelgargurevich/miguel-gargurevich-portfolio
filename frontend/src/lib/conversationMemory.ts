@@ -258,6 +258,11 @@ export class ConversationMemoryManager {
 
   // Save to localStorage
   private saveToStorage(): void {
+    // Check if we're in the browser environment
+    if (typeof window === 'undefined' || !window.localStorage) {
+      return;
+    }
+    
     try {
       const data = Array.from(this.memory.entries()).map(([, memory]) => ({
         ...memory,
@@ -275,6 +280,11 @@ export class ConversationMemoryManager {
 
   // Load from localStorage
   private loadFromStorage(): void {
+    // Check if we're in the browser environment
+    if (typeof window === 'undefined' || !window.localStorage) {
+      return;
+    }
+    
     try {
       const data = localStorage.getItem(STORAGE_KEY);
       if (data) {
