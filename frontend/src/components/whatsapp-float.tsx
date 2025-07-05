@@ -7,7 +7,7 @@ import { CONTACT_CONFIG } from '@/config/contact'
 export default function WhatsAppFloat() {
   const t = useTranslations('whatsapp')
   
-  const message = encodeURIComponent('¡Hola Miguel! Me interesa conocer más sobre tus servicios de arquitectura cloud y desarrollo.')
+  const message = '¡Hola Miguel! Me interesa conocer más sobre tus servicios de arquitectura cloud y desarrollo.'
   const whatsappUrl = CONTACT_CONFIG.whatsapp.getUrl(message)
 
   const handleClick = () => {
