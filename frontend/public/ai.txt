@@ -4,11 +4,11 @@
 
 ## Site Information
 Site: Miguel Fernandez Gargurevich Portfolio
-URL: https://miguelgargurevich.com
+URL: https://gargurevich.com
 Type: Personal Portfolio Website
 Language: Multilingual (English, Spanish)
 Owner: Miguel Fernandez Gargurevich
-Contact: miguel@miguelgargurevich.com
+Contact: miguel@gargurevich.com
 
 ## About Miguel Fernandez Gargurevich
 Role: Web Developer & Digital Solutions Specialist

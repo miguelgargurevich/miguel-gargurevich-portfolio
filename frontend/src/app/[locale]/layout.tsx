@@ -25,8 +25,10 @@ export async function generateMetadata({
   const {locale} = await params;
   const t = await getTranslations({locale, namespace: 'seo'});
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://miguelgargurevich.com';
-  const url = `${baseUrl}/${locale}`;
+  // Determine the base URL based on environment
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://gargurevich.com';
+  
+  const url = locale === 'en' ? `${baseUrl}/en` : `${baseUrl}/es`;
   
   return {
     title: t('title'),
@@ -35,6 +37,11 @@ export async function generateMetadata({
     authors: [{ name: t('author') }],
     creator: t('author'),
     publisher: t('author'),
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
     robots: {
       index: true,
       follow: true,
@@ -56,17 +63,18 @@ export async function generateMetadata({
     },
     openGraph: {
       type: 'website',
-      locale: locale,
+      locale: locale === 'es' ? 'es_ES' : 'en_US',
       url: url,
       title: t('ogTitle'),
       description: t('ogDescription'),
-      siteName: 'Miguel Fernandez Gargurevich Portfolio',
+      siteName: 'Miguel Fernandez Gargurevich - Portfolio',
       images: [
         {
-          url: `${baseUrl}/og-image.jpg`,
+          url: `${baseUrl}/og-image.svg`,
           width: 1200,
           height: 630,
           alt: t('ogTitle'),
+          type: 'image/svg+xml',
         },
       ],
     },
@@ -75,17 +83,28 @@ export async function generateMetadata({
       title: t('twitterTitle'),
       description: t('twitterDescription'),
       creator: '@miguelgargurevich',
-      images: [`${baseUrl}/og-image.jpg`],
+      images: [`${baseUrl}/og-image.svg`],
     },
     verification: {
       google: process.env.GOOGLE_SITE_VERIFICATION,
     },
+    category: 'technology',
+    classification: 'Business',
     other: {
       'application-name': 'Miguel Fernandez Gargurevich Portfolio',
       'apple-mobile-web-app-title': 'Miguel F. Gargurevich',
+      'apple-mobile-web-app-capable': 'yes',
+      'apple-mobile-web-app-status-bar-style': 'default',
       'msapplication-TileColor': '#0ea5e9',
+      'msapplication-config': '/browserconfig.xml',
       'theme-color': '#0ea5e9',
       'ai-content': `${baseUrl}/ai.txt`,
+      'geo.region': 'PE',
+      'geo.placename': 'Lima, Peru',
+      'rating': 'general',
+      'distribution': 'global',
+      'language': locale,
+      'revisit-after': '7 days',
     },
   };
 }
@@ -109,6 +128,9 @@ export default async function LocaleLayout({
   // side is the easiest way to get started
   const messages = await getMessages();
 
+  // Determine the base URL based on environment
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://gargurevich.com';
+
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
@@ -121,9 +143,12 @@ export default async function LocaleLayout({
               '@context': 'https://schema.org',
               '@type': 'Person',
               name: 'Miguel Fernandez Gargurevich',
-              jobTitle: 'Web Developer & Digital Solutions Specialist',
-              description: 'Specialized in Azure cloud infrastructure, AI integration, and modern web applications',
-              url: process.env.NEXT_PUBLIC_SITE_URL || 'https://miguelgargurevich.com',
+              jobTitle: locale === 'es' ? 'Desarrollador Web & Especialista en Soluciones Digitales' : 'Web Developer & Digital Solutions Specialist',
+              description: locale === 'es' 
+                ? 'Especialista en infraestructura Azure, integración de IA y aplicaciones web modernas' 
+                : 'Specialized in Azure cloud infrastructure, AI integration, and modern web applications',
+              url: baseUrl,
+              email: 'miguel@gargurevich.com',
               sameAs: [
                 'https://www.linkedin.com/in/miguel-arturo-fernandez-gargurevich/',
                 'https://github.com/miguelgargurevich/',
@@ -139,12 +164,39 @@ export default async function LocaleLayout({
                 'Machine Learning',
                 'DevOps',
                 'Docker',
-                'Kubernetes'
+                'Kubernetes',
+                'React',
+                'Next.js',
+                'Web Development',
+                'E-commerce',
+                'Mobile Applications'
               ],
-              alumniOf: 'Universidad de Ingeniería y Tecnología',
+              alumniOf: {
+                '@type': 'Organization',
+                'name': 'Universidad de Ingeniería y Tecnología',
+                'sameAs': 'https://www.utec.edu.pe/'
+              },
               workLocation: {
                 '@type': 'Place',
                 name: 'Remote / Global'
+              },
+              offers: {
+                '@type': 'Offer',
+                'itemOffered': {
+                  '@type': 'Service',
+                  'name': locale === 'es' ? 'Servicios de Desarrollo Web' : 'Web Development Services',
+                  'description': locale === 'es' 
+                    ? 'Desarrollo de sitios web modernos, landing pages, e-commerce y aplicaciones móviles'
+                    : 'Development of modern websites, landing pages, e-commerce and mobile applications'
+                }
+              },
+              hasOccupation: {
+                '@type': 'Occupation',
+                'name': locale === 'es' ? 'Desarrollador Web' : 'Web Developer',
+                'occupationLocation': {
+                  '@type': 'Place',
+                  'name': 'Remote'
+                }
               }
             })
           }}

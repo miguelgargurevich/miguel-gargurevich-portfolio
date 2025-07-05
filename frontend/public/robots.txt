@@ -1,8 +1,11 @@
 User-agent: *
 Allow: /
 
+User-agent: *
+Allow: /
+
 # Sitemaps
-Sitemap: https://miguelgargurevich.com/sitemap.xml
+Sitemap: https://gargurevich.com/sitemap.xml
 
 # AI and ML models access
 # AI.txt file for language models and chatbots
@@ -18,4 +21,5 @@ Disallow: /_next/
 Disallow: /.*
 
 # Allow specific API endpoints that should be crawled
+Allow: /api/og
 Allow: /api/suggest-keywords
