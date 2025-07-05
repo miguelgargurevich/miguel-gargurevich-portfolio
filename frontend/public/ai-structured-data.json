@@ -1,0 +1,140 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Miguel Fernandez Gargurevich",
+  "jobTitle": "Senior Web Developer & Digital Solutions Specialist",
+  "description": "Especialista en desarrollo web moderno con Next.js, TypeScript y Azure. 5+ años de experiencia, 50+ proyectos completados. Servicios desde landing pages hasta aplicaciones móviles y migración cloud.",
+  "url": "https://gargurevich.com",
+  "email": "miguel@gargurevich.com",
+  "telephone": "+51966918363",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Lima",
+    "addressCountry": "PE"
+  },
+  "sameAs": [
+    "https://gargurevich.com",
+    "https://www.gargurevich.com",
+    "https://www.linkedin.com/in/miguel-arturo-fernandez-gargurevich/",
+    "https://github.com/miguelgargurevich/"
+  ],
+  "knowsAbout": [
+    "Web Development",
+    "Next.js",
+    "React",
+    "TypeScript",
+    "JavaScript",
+    "Azure Cloud",
+    "AI Integration",
+    "E-commerce Development",
+    "Landing Pages",
+    "Mobile App Development",
+    "Cloud Migration",
+    "DevOps",
+    "SEO Optimization",
+    "Python",
+    "Node.js"
+  ],
+  "offers": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Landing Pages",
+        "description": "Desarrollo de landing pages profesionales y responsivas"
+      },
+      "priceRange": "$300-800",
+      "availability": "InStock"
+    },
+    {
+      "@type": "Offer", 
+      "itemOffered": {
+        "@type": "Service",
+        "name": "E-commerce Solutions",
+        "description": "Tiendas online completas con integración de pagos"
+      },
+      "priceRange": "$500-2000",
+      "availability": "InStock"
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service", 
+        "name": "Web Applications",
+        "description": "Aplicaciones web personalizadas con bases de datos"
+      },
+      "priceRange": "$800-3000",
+      "availability": "InStock"
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Mobile Applications", 
+        "description": "Aplicaciones móviles multiplataforma"
+      },
+      "priceRange": "$1500-5000",
+      "availability": "InStock"
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "AI Integration",
+        "description": "Integración de IA como ChatGPT y Gemini en aplicaciones web"
+      },
+      "priceRange": "$800-3000", 
+      "availability": "InStock"
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Cloud Migration",
+        "description": "Migración de aplicaciones a Azure Cloud"
+      },
+      "priceRange": "$1000-5000",
+      "availability": "InStock"
+    }
+  ],
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Web Developer",
+    "occupationLocation": {
+      "@type": "Place",
+      "name": "Remote/Global"
+    },
+    "skills": [
+      "Next.js", "React", "TypeScript", "JavaScript", "Python", 
+      "Azure", "AWS", "Docker", "Node.js", "MongoDB", "PostgreSQL"
+    ]
+  },
+  "workExample": [
+    {
+      "@type": "CreativeWork",
+      "name": "Multilingual Portfolio with AI",
+      "description": "Portfolio multilingüe con chat de IA integrado",
+      "url": "https://gargurevich.com"
+    }
+  ],
+  "memberOf": {
+    "@type": "Organization",
+    "name": "Universidad de Ingeniería y Tecnología",
+    "sameAs": "https://www.utec.edu.pe/"
+  },
+  "availableLanguage": ["Spanish", "English"],
+  "serviceArea": {
+    "@type": "Place",
+    "name": "Global (Remote Work)"
+  },
+  "priceRange": "$300-5000",
+  "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer", "PayPal"],
+  "currenciesAccepted": "USD",
+  "openingHours": "Mo-Fr 09:00-18:00",
+  "areaServed": ["Peru", "Global"],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "50"
+  }
+}

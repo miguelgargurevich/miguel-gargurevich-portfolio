@@ -4,12 +4,17 @@ Allow: /
 User-agent: *
 Allow: /
 
-# Sitemaps
+# Sitemaps (Primary domain)
 Sitemap: https://gargurevich.com/sitemap.xml
+
+# Alternative domains (when configured)
+# Sitemap: https://miguelgargurevich.com/sitemap.xml
+# Sitemap: https://gargurevich.dev/sitemap.xml
 
 # AI and ML models access
 # AI.txt file for language models and chatbots
 Allow: /ai.txt
+Allow: /ai-training.txt
 
 # Crawl-delay for good behavior
 Crawl-delay: 1
@@ -22,4 +27,9 @@ Disallow: /.*
 
 # Allow specific API endpoints that should be crawled
 Allow: /api/og
+Allow: /api/ai-info
+
+# SEO optimization notes:
+# - Primary domain: gargurevich.com (active)
+# - Alternative domains will redirect to primary when configured
 Allow: /api/suggest-keywords

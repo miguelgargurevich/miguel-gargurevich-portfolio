@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Use the production domain
+  // Use the primary domain (gargurevich.com is now live)
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://gargurevich.com';
   
   const currentDate = new Date();

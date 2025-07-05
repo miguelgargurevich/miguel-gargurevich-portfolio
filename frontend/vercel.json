@@ -1,0 +1,168 @@
+{
+  "functions": {
+    "src/app/api/**/*.ts": {
+      "maxDuration": 30
+    }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        },
+        {
+          "key": "X-AI-Indexing",
+          "value": "allowed"
+        },
+        {
+          "key": "X-ChatGPT-Indexing", 
+          "value": "allowed"
+        },
+        {
+          "key": "X-Claude-Indexing",
+          "value": "allowed"
+        },
+        {
+          "key": "X-Gemini-Indexing",
+          "value": "allowed"
+        }
+      ]
+    },
+    {
+      "source": "/sw.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        },
+        {
+          "key": "Service-Worker-Allowed",
+          "value": "/"
+        }
+      ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/xml"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=3600"
+        }
+      ]
+    },
+    {
+      "source": "/robots.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=3600"
+        }
+      ]
+    },
+    {
+      "source": "/ai.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=3600"
+        },
+        {
+          "key": "X-AI-Indexing",
+          "value": "allowed"
+        },
+        {
+          "key": "X-ChatGPT-Indexing",
+          "value": "allowed"
+        }
+      ]
+    },
+    {
+      "source": "/ai-training.txt",
+      "headers": [
+        {
+          "key": "Content-Type", 
+          "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, s-maxage=3600"
+        },
+        {
+          "key": "X-AI-Training",
+          "value": "allowed"
+        }
+      ]
+    },
+    {
+      "source": "/ai-structured-data.json",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/ld+json"
+        },
+        {
+          "key": "Cache-Control", 
+          "value": "public, max-age=3600, s-maxage=3600"
+        },
+        {
+          "key": "X-AI-Structured-Data",
+          "value": "allowed"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "miguel-gargurevich-portfolio.vercel.app"
+        }
+      ],
+      "destination": "https://gargurevich.com/es",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "miguel-gargurevich-portfolio.vercel.app"
+        }
+      ],
+      "destination": "https://gargurevich.com/$1",
+      "permanent": true
+    }
+  ]
+}

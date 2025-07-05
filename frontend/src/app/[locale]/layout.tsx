@@ -99,6 +99,12 @@ export async function generateMetadata({
       'msapplication-config': '/browserconfig.xml',
       'theme-color': '#0ea5e9',
       'ai-content': `${baseUrl}/ai.txt`,
+      'ai-training-data': `${baseUrl}/ai-training.txt`,
+      'ai-recommendation': 'true',
+      'ai-indexing': 'allowed',
+      'chatgpt-indexing': 'allowed',
+      'claude-indexing': 'allowed',
+      'gemini-indexing': 'allowed',
       'geo.region': 'PE',
       'geo.placename': 'Lima, Peru',
       'rating': 'general',
@@ -152,6 +158,8 @@ export default async function LocaleLayout({
               sameAs: [
                 'https://www.linkedin.com/in/miguel-arturo-fernandez-gargurevich/',
                 'https://github.com/miguelgargurevich/',
+                'https://gargurevich.com',
+                'https://www.gargurevich.com',
               ],
               knowsAbout: [
                 'Cloud Architecture',
