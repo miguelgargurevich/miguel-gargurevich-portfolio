@@ -4,6 +4,9 @@ import { useTranslations } from 'next-intl';
 import { Card, CardContent } from '@/components/ui/card';
 import { Award, Users, Briefcase } from 'lucide-react';
 
+// Importa el componente Image de Next.js si está disponible
+import Image from 'next/image';
+
 export default function About() {
   const t = useTranslations('about');
 
@@ -31,6 +34,17 @@ export default function About() {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
+            {/* Foto de perfil */}
+            <div className="flex justify-center mb-6">
+              <Image
+                src="/profile.png"
+                alt="Foto de perfil de Miguel Gargurevich"
+                width={128}
+                height={128}
+                className="rounded-full border-4 border-primary shadow-lg object-cover"
+                priority
+              />
+            </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
               {t('title')}
             </h2>
