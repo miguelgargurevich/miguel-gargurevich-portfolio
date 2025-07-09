@@ -121,7 +121,6 @@
     "chatDescription": "Obtén respuestas instantáneas sobre servicios, tecnologías y estimaciones de proyectos.",
     "welcomeMessage": "¡Hola! Soy el asistente profesional de Miguel. Puedo ayudarte con:\n\n• Información sobre servicios y experiencia\n• Recomendaciones de tecnologías\n• Estimaciones de costos de proyectos\n• Preguntas sobre arquitectura en la nube\n• Cronogramas de desarrollo\n\n¿Qué te gustaría saber?",
     "howCanIHelp": "¿En qué puedo ayudarte hoy? 😊",
-    "finalQuestion": "¿Hay algo más en lo que pueda ayudarte? 😊",
     "inputPlaceholder": "Pregunta sobre servicios, costos, tecnologías...",
     "typing": "Escribiendo...",
     "clearChat": "Limpiar Chat",

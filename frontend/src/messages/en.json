@@ -121,7 +121,6 @@
     "chatDescription": "Get instant answers about services, technologies, and project estimates.",
     "welcomeMessage": "Hi! I'm Miguel's professional assistant. I can help you with:\n\n• Information about basic services (websites, apps, e-commerce)\n• Technology recommendations\n• Project cost estimates\n• Development timelines\n\nWhat would you like to know?",
     "howCanIHelp": "How can I help you today? 😊",
-    "finalQuestion": "Is there anything else I can help you with? 😊",
     "inputPlaceholder": "Ask about services, costs, technologies...",
     "typing": "Typing...",
     "clearChat": "Clear Chat",
