@@ -131,12 +131,7 @@ export async function POST(request: NextRequest) {
     text = text.replace(/Saludos,?\s*[\n\r]*\s*Miguel Fernandez Gargurevich[\n\r]*\s*Desarrollador Web/gi, '\n\nSu Asistente Profesional.');
     text = text.replace(/Best regards,?\s*[\n\r]*\s*Miguel Fernandez Gargurevich[\n\r]*\s*Web Developer/gi, '\n\nYour Professional Assistant.');
     
-    // Ensure proper spacing before the final question
-    const translations = loadTranslations(locale);
-    const finalQuestion = translations.professionalChat.finalQuestion;
-    
-    // More aggressive cleanup of final questions - remove any occurrence of either question
-    // Split by lines and filter out lines that contain final questions or consultation calls
+    // Limpieza de preguntas finales y signos de puntuación sobrantes
     let lines = text.split('\n');
     lines = lines.filter(line => {
       const trimmedLine = line.trim();
@@ -145,15 +140,8 @@ export async function POST(request: NextRequest) {
              !trimmedLine.includes('Contact me directly for a detailed consultation!') &&
              !trimmedLine.includes('¡Contáctame directamente para una consulta detallada!');
     });
-    
-    // Rejoin the lines
     text = lines.join('\n').trim();
-    
-    // Remove any trailing punctuation that might be left hanging
     text = text.replace(/[!\.\?]*\s*$/, '');
-    
-    // Add the correct final question for the current locale
-    text += `\n\n${finalQuestion}`;
 
     console.log('Successfully received response from Gemini API');
     return NextResponse.json({ response: text });
